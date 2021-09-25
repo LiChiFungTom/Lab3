@@ -3,6 +3,6 @@ public class test{
         
         OldCircleImpl circle = new OldCircleImpl(10,15,25.5);
         CircleObjectAdapter adapter = new CircleObjectAdapter(circle); 
-        circle.printCircle(adapter);
+        PrintCircle.printCircle(adapter);
     }
 }
