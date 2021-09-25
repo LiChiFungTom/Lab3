@@ -4,7 +4,9 @@ import java.awt.Point;
 public class CircleObjectAdapter implements NewCircle{
 
     OldCircleImpl oldCircle;
-
+    int y;
+    int x;
+    
     public CircleObjectAdapter(OldCircleImpl oldCircle){
         this.oldCircle = oldCircle;
     }
@@ -18,15 +20,12 @@ public class CircleObjectAdapter implements NewCircle{
     }
     
 	public Point getCenter( ){
-        double x;
-        double y;
         double [] coeff = new double[3];
         coeff = oldCircle.getCoeff();
-        x = coeff[0];
-        y = coeff[1];
-        return Point(x,y);
-
+        x = (int)coeff[0];
+        y = (int)coeff[1];
+        Point p = new Point(x,y);
+        return p;
     }
+
 }
-
-
